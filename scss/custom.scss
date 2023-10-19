@@ -1,0 +1,50 @@
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+$primary: #EC1D24;
+$secondary: #9F0013;
+
+$font-family-sans-serif: Roboto, system-ui, "Helvetica Neue";
+
+
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/utilities";
+// $body-bg: #000;
+// $body-color: #111;
+
+// 4. Include any optional Bootstrap components as you like
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+
+// $navbar-brand-padding-y:16px;
+
+.btn-primary {
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: #EC1D24;
+  --bs-btn-border-color: var(--bd-violet);
+  --bs-btn-border-radius: .5rem;
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: #9F0013;
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #{shade-color($primary, 20%)};
+  --bs-btn-active-border-color: #{shade-color($primary, 20%)};
+  --btn-disabled-bg: #d2d2d2;
+}
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary
+);
+
+// @import "../node_modules/bootstrap/scss/bootstrap";
